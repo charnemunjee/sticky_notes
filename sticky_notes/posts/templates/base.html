@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- set title of base page to "sticky notes"-->
+    <title>
+        {% block title %}
+            Sticky Notes
+        {% endblock title %}
+    </title>
+    <!-- reference to the css sheet-->
+    <link rel="stylesheet" href="{% static 'posts/styles.css' %}" />
+</head>
+<body>
+    <header>
+        <h1>
+            {% block header %}
+                Sticky Notes
+            {% endblock header %}
+        </h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock content%}
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--posts/templates/posts/post_form.html -->
+{% extends 'base.html' %}
+<!-- edit or create a new sticky note -->
+{% block title %}
+    Sticky Notes - 
+    {% if form.instance.pk %}
+        Edit
+    {% else %}
+        Create
+    {% endif %}
+    Post
+{% endblock %}
+{% block content %}
+    <h2>
+        <!--if the form instance has a primary key, 
+        it means we are editing an existing sticky note, 
+        otherwise we are creating a new one-->
+        {% if form.instance.pk %}
+            Edit
+        {% else %}
+            Create
+        {% endif %}
+        <!--Post-->
+        Sticky Note
+    </h2>
+    <form method="post"
+        action="{% if form.instance.pk %}{% url 'post_update' pk=form.instance.pk %}
+        {% else %}{% url 'post_create' %}{% endif %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- Save button for form-->
+        <button id = "save-button" type="submit">
+            Save
+        </button>
+    </form>
+    <!-- Back to list link -->
+    <a href="{% url 'post_list' %}">Back to list</a>
+{% endblock content %}

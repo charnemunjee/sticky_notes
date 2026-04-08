@@ -1,0 +1,14 @@
+<!--posts/templates/posts/post_detail.html -->
+{% extends 'base.html' %}
+{% block title %}
+    Sticky Notes - {{ post.title }}
+{% endblock title %}
+{% block content %}
+    <h2 class = "sticky-content">{{ post.title }}</h2>
+    <p class = "sticky-content">{{ post.content }}</p>
+
+    <!--links for updating and deleting the sticky note-->
+    <a class = "content_links" href="{% url 'post_update' pk=post.pk %}">Update Note</a>
+    <a class = "content_links" href="{% url 'post_delete' pk=post.pk %}">Delete Note</a>
+    <a class = "content_links" href="{% url 'post_list' %}">Back to list</a>
+{% endblock content %}

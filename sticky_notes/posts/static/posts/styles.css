@@ -1,0 +1,97 @@
+/* posts/static/posts/styles.css */
+
+/*This CSS file styles the sticky notes application. 
+It defines the layout and appearance of the body, header, 
+main content area, list items, footer, and specific 
+elements like the add sticky note link and save button.*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DAF9DE;
+    margin: 20px;
+    padding: 20px;
+}
+
+header {
+    background-color: #b5f8be;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+li{
+    background-color: lightgoldenrodyellow;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+#add-sticky-note {
+    text-decoration: none;
+    padding: 50px;
+    border: 30px;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+#sticky-content {
+    /* display: inline-block; */
+    background-color: lightgoldenrodyellow;
+    color: #333;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+}
+
+#save-button[type="submit"] {
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 20px;
+}
+
+.content_links {
+        display: inline-block;
+        padding: 10px 10px;
+        background-color: rgb(167, 165, 165);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .content_links:hover {
+        background-color: rgb(102, 101, 101);
+    }
