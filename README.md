@@ -4,9 +4,12 @@
 
 #### Overview
 
-The project is a sticky notes application
+The project is a sticky notes application. The application allows the user to create a number of sticky notes on a webpage. The following functionalities are possible in the sticky notes app:
 
-The application allows the user to create a number of sticky notes on the webpage. Once a list of sticky notes is made, it is possible to add more sticky notes to the list, delete the sticky notes or edit them
+* view all sticky notes
+* add new sticky notes to the list 
+* delete a sticky note
+* edit an existing sticky note
 
 
 
@@ -18,18 +21,21 @@ The project is written in python using Django. This project also includes four H
 
 **Clone the project on GitHub**
 
-Navigate to the repository on GitHub
+Navigate to the terminal VS code
 
-Open the command prompt and type "cd" and the link where the folder should be stored
+Type the following into the VS code terminal:
 
-Type "git clone" as well as the url of the GitHub repository
+&#x09;cd <link where sticky\_notes app should be stored> 	
 
+&#x09;git clone https://github.com/charnemunjee/sticky\_notes 
 
+&#x09;
 
 **Create a virtual environment IN VSCode**
 
-* type cd and the link to the folder where the manage.py folder is stored
-* type the following command into the command prompt: python -m venv venv
+* type the following command into the terminal: 
+
+&#x09;python -m venv venv
 
 
 
@@ -42,31 +48,27 @@ As stated in the requirements.txt file, the following packages need to be instal
 * sqlparse==0.5.5
 * tzdata==2025.3
 
-Install these packages by running the following command: pip install -r requirements.txt
+Install these packages by running the following terminal: 
+
+&#x09;pip install -r requirements.txt
 
 
 
-**Run tests to ensure functionalities work**
+**Collect the static folders and apply migrations**
 
-Type the following into the command prompt**:** python manage.py test posts
-
-
-
-**Collect the static folders**
-
-Type the following into the command prompt:
+Type the following into the commands in the terminal:
 
 * python manage.py collectstatic
+* python manage.py makemigrations
+* python manage.py migrate
 
 
 
-**Migrate and run the server**
+**Run the development server**
 
 Type the following into the command prompt
 
-* python manage.py makemigrations 
-* python manage.py migrate 
-* python manage.py runserver 
+* python manage.py runserver
 
 
 
@@ -93,8 +95,8 @@ The base view allows the user to do the following:
 
 Clicking on the sticky note title allows the user the option to:
 
-* Update the sticky note
 * View the details of the sticky note
+* Update the sticky note
 * Go back to the previous view
 * Delete the sticky note - This removes the sticky note and it is no longer displayed in the base view (list of sticky notes)
 
@@ -102,7 +104,7 @@ Clicking on the sticky note title allows the user the option to:
 
 **Update sticky note**
 
-The web page allows the user to edit the Title and detail/Content of the sticky note
+The web page allows the user to edit the Title and detail/content of the sticky note
 
 The button at the bottom allows the user to save the updated sticky note
 
